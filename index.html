@@ -29,286 +29,282 @@
 
 <body>
 
-	<h1>Enviar datos con fetch POST</h1>
-	<form id="formulario">
-		
-		<div class="form-floating">
-			<input type="nombre" class="form-control" id="nombre" placeholder="Password">
-			<label for="nombre">Nombre</label>
-		  </div>
 
-		<div class="form-floating mb-3">
-			<input type="email" class="form-control" id="correo" placeholder="name@example.com">
-			<label for="correo">Correo Electrónico</label>
-		  </div>
-		
-		  <select class="form-select" aria-label="Default select example">
-			<option selected id="eleccionmodfav" name="eleccionmodfav">Elige tu mod favorito</option>
-			<option value="1">	Mochilas</option>
-			<option value="2">Generación de Terreno</option>
-			<option value="3">Estructuras rediseñadas</option>
-			<option value="4">Estructuras extras</option>
 
-		  </select>
 
-    <button class="btn btn-success" type="submit"Enviar></button>
-        
-        <input type="submit" value="Enviar">
+	<!-- Start Header/Navigation -->
 
-	</form>
-	<script>
-		const formulario = document.getElementById('formulario');
-		formulario.addEventListener('submit', (event) => {
-			event.preventDefault();
-			const nombre = document.getElementById('nombre').value;
-			const email = document.getElementById('correo').value;
-			const eleccionmodfav = document.getElementById('eleccionmodfav').value;
-			const datos = {
-				nombre: nombre,
-				email: email,
-				quiencontacta: quiencontacta
-			};
-			fetch('https://recursos-6f043-default-rtdb.firebaseio.com/Mods-Plattform.json', {
-				method: 'POST',
-				body: JSON.stringify(datos),
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			})
-				.then(respuesta => respuesta.json())
-				.then(datos => {
-					console.log(datos); // Imprimir la respuesta del servidor
-				})
-				.catch(error => console.error(error));
-		});
-	</script>
-		  
-		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
-			<div class="container">
-				<a class="navbar-brand" href="index.html">Furni<span>.</span></a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarsFurni">
-					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li><a class="nav-link" href="shop.html">Shop</a></li>
-						<li><a class="nav-link" href="about.html">About us</a></li>
-						<li><a class="nav-link" href="services.html">Services</a></li>
-						<li><a class="nav-link" href="blog.html">Blog</a></li>
-						<li><a class="nav-link" href="contact.html">Contact us</a></li>
-					</ul>
-
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-					</ul>
-				</div>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary px-5">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">LEWU</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto ">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Cursos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Reseñas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sobre nosotros</a>
+					</li>
+				</ul>
 			</div>
-				
-		</nav>
-		<!-- End Header/Navigation -->
+		</div>
+	</nav>
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
-								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
-							</div>
-						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-								<img src="images/couch.png" class="img-fluid">
-							</div>
-						</div>
+
+	<!-- End Header/Navigation -->
+
+
+
+
+
+	<div class="container mt-5">
+		<!-- Content here -->
+		<div class="container text-center">
+			<div class="row align-items-center">
+				<div class="col-6">
+					<div class="intro-excerpt">
+						<h1>Learn English <span clsas="d-block">with us! </span></h1>
+						<p class="mb-4">Pronunciation is not the same as accent. Improve your pronunciation skills with
+							the different services we have for you!.</p>
+						<a href="#" class="btn btn-white-outline">Explore our services</a></p>
+					</div>
+				</div>
+				<div class="col-6">
+					<img src="https://cdn.pixabay.com/photo/2017/08/23/11/12/notebook-2672467_1280.jpg"
+						class="img-fluid">
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div class="container mt-5">
+		<!-- Content here -->
+		<div class="row">
+			<div class="col-4">
+				<div class="card p-3" style="width: 18rem;">
+					<img src="https://images.pexels.com/photos/7516353/pexels-photo-7516353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail" alt="...">
+					<div class="card-body text-center">
+						<h5 class="card-title ">Conversa con nativos</h5>
+						<p class="card-text">Habla con personas que dominan el idioma como su lengua natal.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
 					</div>
 				</div>
 			</div>
-		<!-- End Hero Section -->
+		
 
-		<!-- Start Product Section -->
-		<div class="product-section">
-			<div class="container">
-				<div class="row">
-
-					<!-- Start Column 1 -->
-					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-						<h2 class="mb-4 section-title">Crafted with excellent material.</h2>
-						<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
-						<p><a href="shop.html" class="btn">Explore</a></p>
-					</div> 
-					<!-- End Column 1 -->
-
-					<!-- Start Column 2 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="images/product-1.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Nordic Chair</h3>
-							<strong class="product-price">$50.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div> 
-					<!-- End Column 2 -->
-
-					<!-- Start Column 3 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="images/product-2.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Kruzo Aero Chair</h3>
-							<strong class="product-price">$78.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
+			<div class="col-4">
+				<div class="card p-3" style="width: 18rem;">
+					<img src="https://images.pexels.com/photos/18069696/pexels-photo-18069696.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail" alt="...">
+					<div class="card-body text-center">
+						<h5 class="card-title">Aprende con Inteligencia Artificial</h5>
+						<p class="card-text">La Inteligencia Artificial detectarà tu nivel de Inglès y te prooverà lecciones, feedback, y pondrà a prueba tu pronunciaciòn.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
 					</div>
-					<!-- End Column 3 -->
+				</div>
+			</div>
+	
 
-					<!-- Start Column 4 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="images/product-3.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Ergonomic Chair</h3>
-							<strong class="product-price">$43.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
+			<div class="col-4">
+				<div class="card p-3" style="width: 18rem;">
+					<img src="https://images.pexels.com/photos/5905710/pexels-photo-5905710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-thumbnail" alt="...">
+					<div class="card-body text-center">
+						<h5 class="card-title">Aprende con LEWU!</h5>
+						<p class="card-text">Nuestros cursos estàn dirigidos por excelentes profesionales que te giaràn durante tu proceso de adquisiciòn de la lengua.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
 					</div>
-					<!-- End Column 4 -->
-
 				</div>
 			</div>
 		</div>
-		<!-- End Product Section -->
+	</div>
 
 	
 
-		<!-- Start Footer Section -->
-		<footer class="footer-section">
-			<div class="container relative">
 
-				<div class="sofa-img">
-					<img src="images/sofa.png" alt="Image" class="img-fluid">
+
+	<div class="container p-5">
+		<h1 class="text-center">Coloca tu reseña!</h1>
+		<form id="formulario">
+		  <div class="row">
+			<!-- Columna para nombre y correo -->
+			<div class="col-md-6">
+			  <div class="form-floating mb-3">
+				<input type="nombre" class="form-control" id="nombre" placeholder="Nombre">
+				<label for="nombre">Nombre</label>
+			  </div>
+			  <div class="form-floating mb-3">
+				<input type="email" class="form-control" id="correo" placeholder="name@example.com">
+				<label for="correo">Correo Electrónico</label>
+			  </div>
+			</div>
+			<!-- Columna para el text area -->
+			<div class="col-md-6">
+			  <div class="form-floating mb-3">
+				<div class="form-floating">
+				  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+				  <label for="floatingTextarea">Comentario</label>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="row">
+			<!-- Columna para elegir curso -->
+			<div class="col-md-6">
+			  <select class="form-select mb-3" id="modo-aprendizaje" name="modo-aprendizaje" aria-label="Default select example">
+				<option selected>Elige tu curso favorito</option>
+				<option value="Hablar con nativos">Habla con nativos</option>
+				<option value="Aprender con Inteligencia Artificial">Aprende con Inteligencia Artificial</option>
+				<option value="Aprende con Lewu">Aprende con LEWU</option>
+			  </select>
+			</div>
+		  </div>
+	  
+		  <div class="row">
+			<!-- Columna para el botón de enviar -->
+			<div class="col text-center">
+			  <button class="btn btn-success" type="submit">Enviar</button>
+			</div>
+		  </div>
+		</form>
+	  </div>
+	  
+
+
+	<!-- Start table section of javascript -->
+	<div class="row">
+		<div class="p-3 p-lg-5 border bg-white text-center">
+			<table class="table site-block-order-table mb-5">
+				<thead>
+					<th>Persona</th>
+					<th>Curso</th>
+					<th>Reseña</th>
+				</thead>
+				<tbody id="tablebody">
+
+					<!-- Filas dinámicas -->
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			
+
+			<div class="row g-5 mb-5">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
+					<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
+						malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+						Pellentesque habitant</p>
+
+					<ul class="list-unstyled custom-social">
+						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+					</ul>
 				</div>
 
-				<div class="row">
-					<div class="col-lg-8">
-						<div class="subscription-form">
-							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact us</a></li>
+							</ul>
+						</div>
 
-							<form action="#" class="row g-3">
-								<div class="col-auto">
-									<input type="text" class="form-control" placeholder="Enter your name">
-								</div>
-								<div class="col-auto">
-									<input type="email" class="form-control" placeholder="Enter your email">
-								</div>
-								<div class="col-auto">
-									<button class="btn btn-primary">
-										<span class="fa fa-paper-plane"></span>
-									</button>
-								</div>
-							</form>
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Knowledge base</a></li>
+								<li><a href="#">Live chat</a></li>
+							</ul>
+						</div>
 
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Jobs</a></li>
+								<li><a href="#">Our team</a></li>
+								<li><a href="#">Leadership</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Nordic Chair</a></li>
+								<li><a href="#">Kruzo Aero</a></li>
+								<li><a href="#">Ergonomic Chair</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 
-				<div class="row g-5 mb-5">
-					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-						<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+			</div>
 
-						<ul class="list-unstyled custom-social">
-							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-6">
+						<p class="mb-2 text-center text-lg-start">Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script>
+							. All Rights Reserved. &mdash; Designed with love by <a
+								href="https://untree.co">Untree.co</a> Distributed By <a
+								hreff="https://themewagon.com">ThemeWagon</a>
+							<!-- License information: https://untree.co/license/ -->
+						</p>
+					</div>
+
+
+
+					<div class="col-lg-6 text-center text-lg-end">
+						<ul class="list-unstyled d-inline-flex ms-auto">
+							<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
 						</ul>
 					</div>
 
-					<div class="col-lg-8">
-						<div class="row links-wrap">
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Blog</a></li>
-									<li><a href="#">Contact us</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Support</a></li>
-									<li><a href="#">Knowledge base</a></li>
-									<li><a href="#">Live chat</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Our team</a></li>
-									<li><a href="#">Leadership</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Nordic Chair</a></li>
-									<li><a href="#">Kruzo Aero</a></li>
-									<li><a href="#">Ergonomic Chair</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
 				</div>
+			</div>
 
-				<div class="border-top copyright">
-					<div class="row pt-4">
-						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-	. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a
-		hreff="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
-	</p>
-	</div>
-
-	<div class="col-lg-6 text-center text-lg-end">
-		<ul class="list-unstyled d-inline-flex ms-auto">
-			<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-			<li><a href="#">Privacy Policy</a></li>
-		</ul>
-	</div>
-
-	</div>
-	</div>
-
-	</div>
+		</div>
 	</footer>
 	<!-- End Footer Section -->
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>
 	<script src="js/custom.js"></script>
 </body>
 
 </html>
+
+<!-- imagenes:
+https://images.pexels.com/photos/7516353/pexels-photo-7516353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 esta es la man hablando
+https://images.pexels.com/photos/18069696/pexels-photo-18069696.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  esta es la ia
+https://images.pexels.com/photos/5905710/pexels-photo-5905710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 curso online
+-->
