@@ -15,7 +15,16 @@ body {
   line-height: 28px;
   color: #6a6a6a;
   font-size: 14px;
-  background-color: #eff2f1; }
+  background-color: #e1f3d8; }
+
+
+.presentation{
+  background-color: #2a9d90;
+}
+header{
+  background-color: #4c9e94;
+}
+
 
 a {
   text-decoration: none;
