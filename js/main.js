@@ -14,6 +14,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const modoAprendizaje = document.getElementById('modo-aprendizaje').value;
     const comentario = document.getElementById('floatingTextarea').value;
 
+
+     // Validaciones de los campos nombre, email, select y textarea
+ 
+     if (!nombre) {
+       valid = false;
+       alert('El campo nombre es obligatorio.');
+     }
+ 
+     if (!email) {
+       alert('El campo correo electrónico es obligatorio.');
+     } else if (!/\S+@\S+\.\S+/.test(email)) {
+       alert('El correo electrónico no es válido.');
+     }
+ 
+     if (!modoAprendizaje) {
+       alert('Seleccione una opcion de: Elige tu curso favorito.');
+     }
+ 
+     if (!comentario) {
+       mensajeError += 'El campo comentario es obligatorio.\n';
+     }
+
+     // Fin de validaciones
+     
     const datos = {
       nombre: nombre,
       email: email,
